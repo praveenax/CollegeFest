@@ -80,17 +80,13 @@ public class MainActivity extends AppCompatActivity {
         imageSwitcher.postDelayed(new Runnable() {
             int i = 0;
             public void run() {
-
-                imageSwitcher.setImageResource(
-                        i++ % 2 == 0 ?
-                                R.drawable.ic_home_black_24dp :
-                                R.drawable.ic_dashboard_black_24dp);
-                imageSwitcher.setImageURI(i++ % 2 == 0 ?
-                        img_uri :
-                        img_uri2);
-                imageSwitcher.postDelayed(this, 1000);
+                int drawable = i++ % 2 == 0 ?R.drawable.ic_home_black_24dp :R.drawable.ic_dashboard_black_24dp;
+                imageSwitcher.setImageResource(drawable);
+//                imageSwitcher.setImageURI(i++ % 2 == 0 ?img_uri :img_uri2);
+//                imageSwitcher.setImageResource();
+                imageSwitcher.postDelayed(this, 2000);
             }
-        }, 1000);
+        }, 2000);
 
 
 //        Animation in = AnimationUtils.loadAnimation(this,android.R.anim.slide_in_left);
